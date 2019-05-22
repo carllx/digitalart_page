@@ -1,0 +1,32 @@
+{
+  "name": "digitalart_page",
+  "version": "1.0.0",
+  "description": "dev digital art webpage",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "export": "next export",
+    "start": "NODE_ENV=production node server.js",
+    "serve": "npm run build && npm run export && cd out && serve -p 8080 && cd D:/PROJECTS/app web carllx/digitalart_page"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@carllx:carllx/digitalart_page.git"
+  },
+  "keywords": [
+    "digital",
+    "art",
+    "three",
+    "webgl",
+    "3d"
+  ],
+  "author": "carllx",
+  "license": "ISC",
+  "dependencies": {
+    "express": "*",
+    "next": "*",
+    "react": "*",
+    "react-dom": "*"
+  }
+}
