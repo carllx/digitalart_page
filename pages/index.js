@@ -4,7 +4,7 @@ import Link from 'next/link'
 function PostLink(props) {
   return (
     <li>
-      <Link as={`/p/${props.id}`} href={`/post?title=${props.title}`}>
+      <Link as={`/post/${props.id}`} href={`/post?title=${props.title}`}>
         <a>{props.title}</a>
       </Link>
     </li>
