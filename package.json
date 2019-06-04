@@ -10,8 +10,8 @@
     "start": "NODE_ENV=production node server.js",
     "serve": "npm run build && npm run export && cd out && serve -p 8080 && cd D:/PROJECTS/app web carllx/digitalart_page",
     "pushdev": "git add . &&  git commit -m   \"$npm_package_config_commitmessage\"  && git push origin master",
-    "pushsito": "npm run export && cd out/ && node -e \"console.log('now path on :',process.cwd())\" && git add . && git commit -m  \" %npm_package_config_commitmessage% \" && git push origin master"
-    
+    "pushpg": "npm run build && npm run export && cd out/ && node -e \"console.log('now path on :',process.cwd())\" && git add . && git commit -m  \" %npm_package_config_commitmessage% \" && git subtree push --prefix out origin gh-pages",
+    "deploy": "rm -rf node_modules/.cache && next build && next export && touch out/.nojekyll && git add out/ && git commit -m \"%npm_package_config_commitmessage%\" && git subtree push --prefix out origin gh-pages"
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,9 @@
     "express": "*",
     "next": "*",
     "react": "*",
-    "react-dom": "*"
+    "react-dom": "*",
+    "react-three-fiber": "^2.2.0",
+    "three": "^0.105.1"
   },
   "config": {
     "commitmessage": "test push dev"
